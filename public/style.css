@@ -1,0 +1,393 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #f67811;
+}
+
+/* a:hover{
+  text-decoration: underline;
+} */
+
+header {
+  background-color: #000;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+header a {
+  color:#fff;
+}
+
+.myPlan-container h1 {
+  margin: 0;
+}
+
+
+.site-title {
+  font-family: "Roboto Slab", serif;
+  font-size: 80px;
+  font-weight: 100;
+  margin: 0 0 0 20px;
+  /* padding-top:30px; */
+  color: #ffcc99
+}
+
+.content {
+  display: flex;
+}
+
+.filter-container{
+  min-width: 200px;
+  max-width: 200px;
+  margin: 10px 10px auto 10px;
+  padding: 20px;
+  border-radius: 3px;
+  background-color: #ffb266;
+}
+
+.filter-container h2 {
+  margin: 0;
+}
+
+.filter-input-container {
+  width: 100%;
+  margin: 20px 0;
+  align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.filter-input {
+  font-size: 14px;
+  flex: 1 auto;
+  width: 33%;
+  margin-left: 10px;
+  padding: 3px;
+  border: 1px solid #dadada;
+  border-radius: 3px;
+}
+
+.filter-fieldset {
+  flex: 1 100%;
+  border: 1px solid #ababab;
+}
+
+.hidden {
+  display: none;
+}
+
+.action-button {
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  background-color: #000;
+  border: 1px solid #ababab;
+  border-radius: 5px;
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+.action-button:hover{
+  background-color: #ff8000;
+  border-color: #333;
+  color: #333;
+}
+
+#filter-find-button {
+  width: 100%;
+}
+
+.exercise {
+  /*overflow: auto; */
+  display: inline-block;
+  vertical-align: top;
+  height: 340px;
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid #ffcc99;
+  border-radius: 3px;
+}
+
+.exercise-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.exercise-image-container img {
+  padding-top: 20px;
+  max-height: 220px;
+  max-width: 300px;
+}
+
+.exercise-title-container{
+  width: 100%;
+  margin-top: 5px;
+}
+
+.exercise-title {
+
+  font-size: 23px;
+  color: black;
+}
+
+.buttons-container {
+  display: inline-block;
+  font-size: 80%;
+  padding: 3px;
+  margin: 3px 5px;
+  border: 1px solid #ababab;
+  border-radius: 3px;
+
+}
+
+#add-exercise-button {
+  position: fixed;
+  height: 80px;
+  width: 60%;
+  border-radius: 20px;
+  font-size: 40px;
+  bottom: 10px;
+
+  /* center horizontally */
+  margin: 1% auto; /* Will not center vertically and won't work in IE6/7. */
+  left: 0;
+  right: 0;
+
+  /* prevent button text from wrapping when screen width is small */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#modal-add-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.85);
+ }
+
+#add-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  overflow: scroll;
+ }
+
+/* .viewPlanContainer {
+  display:inline-block;
+  position: fixed;
+  right: 10px;
+  top: 150px;
+  height: 5000px;
+} */
+#viewPlan-button {
+  position: absolute;
+  top: 655px;
+  width: 240px;
+  height: 100px;
+  margin: 10px 10px auto 10px;
+  padding: 20px;
+  background-color: #ffb266;
+  border-radius: 3px;
+  border: 1px solid #ababab;
+  font-size: 28px;
+  color: black;
+  cursor: pointer;
+}
+
+#viewPlan-button:hover{
+  border: 1px solid black;
+}
+
+#add-exercise-button {
+  position: absolute;
+  top: 550px;
+  width: 240px;
+  margin: 10px 10px auto 10px;
+  padding: 20px;
+  border-radius: 3px;
+  background-color: #ffb266;
+  color: black;
+  font-size:16px;
+}
+
+/*
+      My Plan page
+*/
+
+.header-myPlan {
+  display: inline;
+  text-align: center;
+}
+
+.row-myPlan {
+    display: flex;
+    padding: 5px;
+}
+
+.column-myPlan {
+    flex: 50%;
+    padding: 0px 5px;
+    margin: 5px;
+    width: 130px;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.header-column-myPlan {
+    text-align: center;
+}
+
+.column-myPlan .exercise {
+    display: flex;
+  	border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0px 2px;
+    margin: 10px 0px;
+    width: auto;
+    height: auto;
+    overflow: auto;
+}
+
+.column-myPlan .exercise-title-container {
+  	margin-left: 10px;
+}
+
+.column-myPlan img {
+    width: 100%;
+}
+.error-block {
+  text-align: center;
+}
+
+.error-block h1 {
+  font-size: 136px;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+.error-block h2 {
+  font-size: 32px;
+  margin: 0;
+}
+
+#modal-add-backdrop{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0,0,0,0.85);
+}
+
+#add-modal{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  overflow: scroll;
+}
+
+.modal-dialog{
+  width: auto;
+  max-width: 600px;
+  min-width: 350px;
+  min-height: 300px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.modal-header{
+  position: relative;
+  padding: 10px 20px;
+}
+
+.modal-header h3{
+  margin: 0;
+  font-size: 28px;
+}
+
+#modal-close{
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 24px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.modal-add-body{
+  padding: 20px;
+}
+
+.exercise-add-element{
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.exercise-add-element > label {
+  font-weight: 600;
+  flex: 1 75px;
+  margin-right: 10px;
+}
+
+.exercise-add-element > input {
+  flex: 6 200px;
+  padding: 8px;
+  font-size: 20px;
+  border: 1px solid #aaa;
+}
+
+.exercise-fieldset{
+  flex: 1 100%;
+  border: 1px solid #ababab;
+}
+
+.modal-footer{
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 10px 20px 10px;
+}
+
+#modal-cancel,
+#modal-accept {
+  margin-right: 20px;
+}
+
+#modal-cancel {
+  color: #333;
+  background-color: #fff;
+}
+
+#modal-cancel:hover{
+  background-color: #eee;
+}
+
+.exercise-info-container {
+  font-size: 16px;
+  display: inline-block;
+  font-weight: bold;
+}
